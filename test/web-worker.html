@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <p></p>
+    <script>
+        var myWorker = new Worker("web-worker-child1.js");  //开启子线程
+
+        myWorker.addEventListener("message", function(oEvent) { //监听子线程回传消息
+            // console.log(oEvent);
+            var hour = Math.floor(oEvent.data/1000/60/60%24),
+                min = Math.floor(oEvent.data/1000/60%60),
+                sec = Math.floor(oEvent.data/1000%60);
+            document.querySelector("p").innerText = hour+":"+min+":"+sec;
+        }, false);
+
+        myWorker.postMessage(new Date("2017-06-06 00:00:00")-new Date().getTime()); //给子线程发消息
+    </script>
+</body>
+
+</html>

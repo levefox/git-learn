@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        /*perspective: 2000px;*/
+        /*-webkit-perspective: 2000px;*/
+    }
+    .box1 {
+        width: 200px;
+        height: 200px;
+        background: #999;
+        margin: 2px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        transform: translateZ(10px);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    .inBox {
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        margin: 10px;
+        transform: translateZ(10px);
+    }
+</style>
+<body>
+    <div style="margin:50px;">
+        <div class="box1">
+            <div class="inBox"></div>
+        </div>
+        <div class="box1">
+            <div class="inBox"></div>
+        </div>
+        <div class="box1">
+            <div class="inBox"></div>
+        </div>
+    </div>
+
+    <script>
+        var box1 = document.querySelectorAll(".box1");
+        for(var i=0;i<box1.length;i++){
+            box1[i].onmouseenter = function(e){
+                this.style.transition = "linear all 0.2s";
+                this.style.transform = "scale(1.1,1.1)";
+                this.addEventListener("webkitTransitionEnd",function(){
+                    this.style.transition = "linear all 0s";
+                    this.onmousemove = function(e){
+                        var initX = initY = this.clientWidth/2;
+                        var x = e.clientX-this.offsetLeft-initX,
+                            y = e.clientY-this.offsetTop-initY;
+                        var radX = Math.atan(y/10),
+                            radY = Math.atan(x/10);
+                        this.style.transform = "scale(1.1,1.1) rotateX("+-radX+"deg) rotateY("+radY+"deg)  translateZ(200px)";
+                    }
+                },false)
+            }
+            box1[i].onmouseleave = function(e){
+                this.style.transition = "linear all 0.2s";
+                this.style.transform = "scale(1,1)";
+            }
+
+        }
+    </script>
+</body>
+</html>

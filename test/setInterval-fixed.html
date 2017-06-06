@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <p></p>
+    <script>
+        var startTime = new Date().getTime();
+        var count = 0;
+        
+        //模拟耗时任务
+        // setInterval(function() {
+        //     var i = 0;
+        //     while (i++ < 100000000);
+        // }, 0);
+
+        function fixed() {
+            count++;
+            var offset = new Date().getTime() - (startTime + count * 1000);//计算延迟时间
+            var nextTime = 1000 - offset;//减去延迟时间，调整下次倒计时开始时间
+            if (nextTime < 0) nextTime = 0;
+            setTimeout(fixed, nextTime);
+
+            console.log(new Date().getTime() - (startTime + count * 1000));
+        }
+        setTimeout(fixed, 1000);
+        //有个问题，每次都要通过当前时间去减，用的本地当前时间，不可行。循环获取服务器当前时间也不可取
+    </script>
+</body>
+
+</html>
