@@ -1,6 +1,7 @@
 test1
-new bug
+new bug fixed
 test3
 
 
 git bug fixed
+test4
