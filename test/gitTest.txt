@@ -1,5 +1,5 @@
 test1
-new bug
+new bug fixed
 test3
 
 
