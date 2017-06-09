@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{$menu.menu_seo_title|default=$site_seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$menu.menu_seo_key|default=$site_seo_keywords}" />
+    <meta name="description" content="{$menu.menu_seo_des|default=$site_seo_description}">
+    {include file="public:head" /}
+</head>
+<body class="page">
+<div class="wrap">
+    {include file="public:nav" /}
+    <div id="main-cmf">
+        <!-- <div class="breadcrumb-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <h2 class="title">{$page_title}</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <div class="breadcrumbs pull-right">
+                            <ul>
+                                <li>{:lang('current location')}:</li>
+                                <li><a href="__ROOT__">{:lang('home')}</a></li>
+                                <li>{$page_title}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="page-header">
+                        <h1 style="padding-left:10px;font-size:30px;font-family:microsoft yahei;margin-bottom:10px;">连体皮衣系列</h1>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 portfolio-wrap" id="news_list">
+						<div class="row">
+	<div class="portfolio dz-itemlist">
+		{foreach name="products" item="vo" key="i"}
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item">
+				<div class="gallery portfolio-item dz-item">
+					{if condition="!empty($vo['product_img'])"}
+                        <a href="{:url('/home/custom/made',array('id'=>$vo['product_id']))}">
+							<span class="portfolio-item-hover"></span>
+							<span class="fullscreen"><i class="fa fa-search"></i></span>
+							<img src="{$vo['product_img']|get_imgurl}" alt=" "/>
+						</a>
+					{/if}
+					<div class="portfolio-item-title">
+						<a href="{:url('/home/custom/made',array('id'=>$vo['product_id']))}" >定制款式：{$vo.product_name}</a>
+						<p>定制价：&yen;{$vo.product_price}</p>
+					</div>
+					<div class="dz-itembtn clearfix">
+                        <a href="{:url('/home/custom/made',array('id'=>$vo['product_id']))}" class="btn btn-block btn-default">前往定制</a>
+                    </div>
+				</div>
+			</div>
+		{/foreach}
+	</div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {include file="public:footer"/}
+</div>
+{include file="public:scripts"/}
+</body>
+</html>

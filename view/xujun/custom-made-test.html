@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>皇欣定制 皇欣定制</title>
+    <meta name="keywords" content="皇欣定制">
+    <meta name="description" content="皇欣定制立足打造一流机车用品、机车装备、个性定制、改装保养、车队服务、俱乐部活动、咖啡生活馆于一体的专业平台">
+    <meta name="author" content="0570am">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <script src="./public/js/jquery-3.1.0.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="./public/js/cookies.min.js"></script>
+    <script src="./public/js/index.js"></script>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="./public/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/common.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="shortcut icon" href="./public/images/favicon.ico">
+</head>
+
+<body class="custom-made">
+    <div class="container-fluid cm-main">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="col-sm-7 draw-wrap">
+                <div class="type-name">C-CLASSIC CITY</div>
+                <div class="draw-box">
+                    <canvas id="c1" width="1200" height="1000"></canvas>
+                </div>
+                <div class="draw-default clearfix">
+                    <div id="BWY" class="col-sm-3 draw-thumbImg">
+                        <!-- <p>黑白黄</p> -->
+                        <img src="./public/images/bwy.png">
+                    </div>
+                    <div id="BGR" class="col-sm-3 draw-thumbImg">
+                        <!-- <p>黑金红</p> -->
+                        <img src="./public/images/bgr.png">
+                    </div>
+                    <div id="BGB" class="col-sm-3 draw-thumbImg">
+                        <!-- <p>黑金蓝</p> -->
+                        <img src="./public/images/bgb.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="select-positon">
+                    <h3>选择定制部位<i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix">
+                        <div class="part-name-item" id="p0" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">前中</div>
+                        <div class="part-name-item" id="p1" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">肩</div>
+                        <div class="part-name-item" id="p2" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">前侧</div>
+                        <div class="part-name-item" id="p3" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">上臂</div>
+                        <div class="part-name-item" id="p4" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">手臂</div>
+                        <div class="part-name-item" id="p5" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">腿1</div>
+                        <div class="part-name-item" id="p6" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">腿2</div>
+                        <div class="part-name-item" id="p7" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">膝</div>
+                        <div class="part-name-item" id="p8" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">小腿</div>
+                        <div class="part-name-item" id="p9" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">后侧1</div>
+                        <div class="part-name-item" id="p10" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">风包</div>
+                        <div class="part-name-item" id="p11" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">后中1</div>
+                        <div class="part-name-item" id="p12" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">拉架</div>
+                        <div class="part-name-item" id="p13" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">后侧2</div>
+                        <div class="part-name-item" id="p14" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">后中2</div>
+                        <div class="part-name-item" id="p15" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">臀部</div>
+                        <div class="part-name-item" id="p16" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">衣领</div>
+                        <div class="part-name-item" id="p17" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">风包图案</div>
+                        <div class="part-name-item" id="p18" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">前片贴条</div>
+                        <div class="part-name-item" id="p19" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">手臂贴条</div>
+                        <div class="part-name-item" id="p20" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">腿部贴条</div>
+                        <div class="part-name-item" id="p21" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">风包贴条</div>
+                        <div class="part-name-item" id="p22" data-value="红色,#e71e28|粉色,#e44c95|荧光橘,#ec6a1a|力豹橘,#f29f18|正黄,#efe034|荧光黄,#fff100|绿色,#60b630|珊瑚蓝,#5ac2d4|蓝色,#135392|藏青,#04314d|紫色,#764b7d|黑色,#221815|白色,#ffffff|灰色,#5a575e|金色,#BE8A39|银色,#B4B5B5">后片贴条</div>
+                    </div>
+                </div>
+                <div class="select-color">
+                    <h3><span>选择部位颜色</span><i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="select-logo-pos">
+                    <h3>选择定制LOGO<i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix">
+                        <div class="logo-pos-item" data-value="前">前</div>
+                        <div class="logo-pos-item" data-value="左袖">左袖</div>
+                        <div class="logo-pos-item" data-value="右袖">右袖</div>
+                        <div class="logo-pos-item" data-value="左腿">左腿</div>
+                        <div class="logo-pos-item" data-value="右腿">右腿</div>
+                        <div class="logo-pos-item" data-value="左膝">左膝</div>
+                        <div class="logo-pos-item" data-value="右膝">右膝</div>
+                        <div class="logo-pos-item" data-value="腰">腰</div>
+                    </div>
+                </div>
+                <div class="select-logo-color">
+                    <h3><span>选择LOGO颜色</span><i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix">
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#e71e28"></div>
+                            <div class="logo-color-name">红色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#e44c95"></div>
+                            <div class="logo-color-name">粉色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#ec6a1a"></div>
+                            <div class="logo-color-name">荧光橘</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#f29f18"></div>
+                            <div class="logo-color-name">力豹橘</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#efe034"></div>
+                            <div class="logo-color-name">正黄</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#fff100"></div>
+                            <div class="logo-color-name">荧光黄</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#60b630"></div>
+                            <div class="logo-color-name">绿色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#5ac2d4"></div>
+                            <div class="logo-color-name">珊瑚蓝</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#135392"></div>
+                            <div class="logo-color-name">蓝色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#04314d"></div>
+                            <div class="logo-color-name">藏青</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#764b7d"></div>
+                            <div class="logo-color-name">紫色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#221815"></div>
+                            <div class="logo-color-name">黑色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#ffffff"></div>
+                            <div class="logo-color-name">白色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#5a575e"></div>
+                            <div class="logo-color-name">灰色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#BE8A39"></div>
+                            <div class="logo-color-name">金色</div>
+                        </div>
+                        <div class="logo-color-item">
+                            <div class="logo-color-value" style="background-color:#B4B5B5"></div>
+                            <div class="logo-color-name">银色</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-logo-font">
+                    <h3><span>选择LOGO字体</span><i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix">
+                        <div class="logo-font-item" data-id="zt0"><img src="./public/images/cmlogos/zt1.jpg"></div>
+                        <div class="logo-font-item" data-id="zt1"><img src="./public/images/cmlogos/zt2.jpg"></div>
+                        <div class="logo-font-item" data-id="zt2"><img src="./public/images/cmlogos/zt3.jpg"></div>
+                        <div class="logo-font-item" data-id="zt3"><img src="./public/images/cmlogos/zt4.jpg"></div>
+                        <div class="logo-font-item" data-id="zt4"><img src="./public/images/cmlogos/zt5.jpg"></div>
+                        <div class="logo-font-item" data-id="zt5"><img src="./public/images/cmlogos/zt6.jpg"></div>
+                        <div class="logo-font-item" data-id="zt6"><img src="./public/images/cmlogos/zt7.jpg"></div>
+                        <div class="logo-font-item" data-id="zt7"><img src="./public/images/cmlogos/zt8.jpg"></div>
+                        <div class="logo-font-item" data-id="zt8"><img src="./public/images/cmlogos/zt9.jpg"></div>
+                        <div class="logo-font-item" data-id="zt9"><img src="./public/images/cmlogos/zt10.jpg"></div>
+                    </div>
+                </div>
+                <div class="select-logo-effect">
+                    <h3><span>选择LOGO效果</span><i class="glyphicon glyphicon-chevron-up"></i></h3>
+                    <div class="clearfix">
+                        <div class="logo-eff-item" data-id="zx0"><img src="./public/images/cmlogos/zx1.jpg"></div>
+                        <div class="logo-eff-item" data-id="zx1"><img src="./public/images/cmlogos/zx2.jpg"></div>
+                        <div class="logo-eff-item" data-id="zx2"><img src="./public/images/cmlogos/zx3.jpg"></div>
+                        <div class="logo-eff-item" data-id="zx3"><img src="./public/images/cmlogos/zx4.jpg"></div>
+                    </div>
+                </div>
+                <div class="input-logotxt">
+                    <h3><span>定制LOGO内容</span></h3>
+                    <input type="text" value="">
+                </div>
+                <a class="btn btn-block btn-danger cm1sub" href="/home/custom/made_step2/pid/1.html">下一步</a>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/draw-cloth-2.js"></script>
+    <script>
+        //自定义圆角矩形方法
+        CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
+            if (w < 2 * r) {
+                r = w / 2;
+            }
+            if (h < 2 * r) {
+                r = h / 2;
+            }
+            this.beginPath();
+            this.moveTo(x + r, y);
+            this.arcTo(x + w, y, x + w, y + h, r);
+            this.arcTo(x + w, y + h, x, y + h, r);
+            this.arcTo(x, y + h, x, y, r);
+            this.arcTo(x, y, x + w, y, r);
+            this.closePath();
+            return this;
+        }
+        $(function() {
+            var oC = document.getElementById('c1');
+            var oGC = oC.getContext('2d');
+            oC.width = '1200'; //不能带单位
+            oC.height = '1000'; //不能带单位
+            var x = y = 0;
+            // var ctds = document.querySelectorAll(".part-color-item");
+            var pSel = document.querySelectorAll('.part-name-item');
+            var lpSel = document.querySelectorAll('.logo-pos-item');
+            var lfSel = document.querySelectorAll('.logo-font-item');
+            var leSel = document.querySelectorAll('.logo-eff-item');
+            var pSeli = 0; //选择部位对应id
+            var initState = 0; //初始化状态
+            //初始化部位对象
+            var colorArr = new Array();
+            $.get('./public/js/c_class_colors_default.json').done(function(data) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var _id = pSel[i].getAttribute('id'),
+                        _name = pSel[i].innerText;
+                    colorArr[data[i].code] = new Object();
+                    colorArr[data[i].code].code = _id;
+                    colorArr[data[i].code].name = _name;
+                    colorArr[data[i].code].colorcade = data[i].colorcade;
+                    colorArr[data[i].code].colorname = data[i].colorname;
+                }
+                initState++;
+            })
+            //初始化logo对象
+            var logos = new Array(),
+                logPos = 0;
+            $.get('./public/js/c_class_logos_default.json').done(function(data) {
+                for (var n = 0; n < lpSel.length; n++) {
+                    var _logoName = lpSel[n].innerText;
+                    data[n].logowz = _logoName;
+                }
+                logos = data;
+                initState++;
+            })
+            var initFill = setInterval(function() {
+                if (initState >= 2) {
+                    fillCloth(oGC, colorArr, '', logos);
+                    clearInterval(initFill);
+                }
+            }, 20);
+
+            //选择部位
+            $(document).on("click", ".part-name-item", function() {
+                pSeli = this.getAttribute('id');
+                var _txt = this.innerText;
+                var _colors = this.getAttribute('data-value').split('|');
+                var _colorHtml = '';
+                for (var i = 0; i < _colors.length; i++) {
+                    var _colorName = _colors[i].split(',')[0];
+                    var _colorValue = _colors[i].split(',')[1];
+                    _colorHtml += '<div class="part-color-item"><div class="part-color-value" style="background-color:' + _colorValue + '"></div><div class="part-color-name">' + _colorName + '</div></div>';
+                }
+                $(".select-color h3 span").html('选择 ' + _txt + ' 颜色');
+                $(".select-color .clearfix").html(_colorHtml);
+                $(".select-color").show();
+                $(this).addClass("cur").siblings().removeClass("cur");
+            })
+            //选择部位颜色
+            $(document).on("click", ".part-color-value", function() {
+                colorArr[pSeli].colorcade = this.style.backgroundColor;
+                colorArr[pSeli].colorname = $(this).next().html();
+                fillCloth(oGC, colorArr, '', logos);
+            })
+            //logo选择
+            $(document).on("click", ".logo-pos-item", function() {
+                logPos = $(this).index();
+                logTxt = $(this).html();
+                $(this).addClass("cur").siblings().removeClass("cur");
+                $(".select-positon>div").slideUp();
+                $(".select-color>div").slideUp();
+                $(".select-logo-color").show();
+                $(".select-logo-font").show();
+                $(".select-logo-effect").show();
+                $(".input-logotxt").show();
+                $(".select-logo-color h3 span").html('选择 ' + logTxt + ' LOGO颜色');
+                $(".select-logo-font h3 span").html('选择 ' + logTxt + ' LOGO字体');
+                $(".select-logo-effect h3 span").html('选择 ' + logTxt + ' LOGO效果');
+                $(".input-logotxt h3 span").html('定制 ' + logTxt + ' LOGO内容');
+            })
+            $(document).on("click", ".logo-font-item", function() {
+                logos[logPos].logozt = $(this).attr('data-id');
+                $(this).addClass("cur").siblings().removeClass("cur");
+            })
+            $(document).on("click", ".logo-eff-item", function() {
+                logos[logPos].logoxg = $(this).attr('data-id');
+                $(this).addClass("cur").siblings().removeClass("cur");
+            })
+            //logo颜色选择
+            $(document).on("click", ".logo-color-value", function() {
+                logos[logPos].logocolor = this.style.backgroundColor;
+                fillCloth(oGC, colorArr, '', logos);
+            })
+            //定制logo内容
+            $(document).on("input", ".input-logotxt input", function() {
+                logos[logPos].logonr = this.value;
+            })
+            //显隐选择内容
+            $(document).on("click", ".glyphicon", function() {
+                $(this).toggleClass("glyphicon-chevron-down");
+                $(this).parent().next().slideToggle();
+            })
+            //公版配色
+            $(document).on("click", "#BWY", function() {
+                $.get('./public/js/c_class_colors_BWY.json').done(function(data) {
+                    data = JSON.parse(data);
+                    for (var i = 0; i < data.length; i++) {
+                        colorArr[data[i].code].code = data[i].code;
+                        colorArr[data[i].code].name = data[i].name;
+                        colorArr[data[i].code].colorcade = data[i].colorcade;
+                        colorArr[data[i].code].colorname = data[i].colorname;
+                    }
+                    $.get('./public/js/c_class_logos_BWY.json').done(function(data) {
+                        for (var i = 0; i < lpSel.length; i++) {
+                            logos[i] = data[i];
+                        }
+                        fillCloth(oGC, colorArr, '', logos);
+                    })
+                })
+            })
+            $(document).on("click", "#BGR", function() {
+                $.get('./public/js/c_class_colors_BGR.json').done(function(data) {
+                    data = JSON.parse(data);
+                    for (var i = 0; i < data.length; i++) {
+                        colorArr[data[i].code].code = data[i].code;
+                        colorArr[data[i].code].name = data[i].name;
+                        colorArr[data[i].code].colorcade = data[i].colorcade;
+                        colorArr[data[i].code].colorname = data[i].colorname;
+                    }
+                    $.get('./public/js/c_class_logos_BGR.json').done(function(data) {
+                        for (var i = 0; i < lpSel.length; i++) {
+                            logos[i] = data[i];
+                        }
+                        fillCloth(oGC, colorArr, '', logos);
+                    })
+                })
+            })
+            $(document).on("click", "#BGB", function() {
+                $.get('./public/js/c_class_colors_BGB.json').done(function(data) {
+                    data = JSON.parse(data);
+                    for (var i = 0; i < data.length; i++) {
+                        colorArr[data[i].code].code = data[i].code;
+                        colorArr[data[i].code].name = data[i].name;
+                        colorArr[data[i].code].colorcade = data[i].colorcade;
+                        colorArr[data[i].code].colorname = data[i].colorname;
+                    }
+                    $.get('./public/js/c_class_logos_BGB.json').done(function(data) {
+                        for (var i = 0; i < lpSel.length; i++) {
+                            logos[i] = data[i];
+                        }
+                        fillCloth(oGC, colorArr, '', logos);
+                    })
+                })
+            })
+
+            //将绘图保存为图片
+            // function convertCanvasToImage(canvas) {
+            // 	var image = new Image();
+            // 	image.src = canvas.toDataURL("image/png");
+            // 	return image;
+            // }
+
+            //提交并存储数据
+            $(document).on("click", ".cm1sub", function() {
+                var colorsCache = [],
+                    logosCache = [];
+                for (key in colorArr) {
+                    colorsCache.push(colorArr[key]);
+                }
+                for (var i = 0; i < logos.length; i++) {
+                    logosCache.push(logos[i]);
+                    delete logosCache[i].lineWidth;
+                    delete logosCache[i].lineColor;
+                }
+                sessionStorage.setItem('order_proimg', oC.toDataURL("image/png"));
+                sessionStorage.setItem('order_procolor', JSON.stringify(colorsCache));
+                sessionStorage.setItem('order_prolog', JSON.stringify(logos));
+            })
+        })
+    </script>
+</body>
+</html>

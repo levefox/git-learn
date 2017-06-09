@@ -1,0 +1,101 @@
+a,
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+img,
+input,
+label,
+li,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none
+}
+
+* {
+	outline: none;
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+a {
+	color: #000;
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: none
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+s {
+	text-decoration: none
+}
+
+body {
+	font-family: "microsoft yahei", Verdana, Arial, Helvetica, sans-serif;
+	background-color: #fff;
+}
+
+.clearfix {
+	zoom: 1
+}
+
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden
+}
+
+button,
+html,
+input,
+select,
+textarea {
+	font-family: 'Helvetica Neue', Helvetica, 'microsoft yahei', Arial, sans-serif
+}
+
+.fr {
+	float: right
+}
+
+.fl {
+	float: left
+}
+
+.dsn {
+	display: none
+}
+
+.w1200 {
+	max-width: 1200px;
+	margin: 0 auto;
+}

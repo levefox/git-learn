@@ -1,0 +1,376 @@
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: 'microsoft yahei';
+}
+.mt120 {
+    margin-top: 120px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+/*售后中心*/
+.server {
+}
+.server .server-form {
+    padding-top: 160px;
+}
+.server .server-form h3 {
+    height: 36px;
+    text-align: right;
+    margin-bottom: 30px;
+}
+.server .server-left {
+}
+.server .server-left img {
+    display: block;
+    width: 100%;
+}
+.server .server-form .tips {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+.server .server-form .form-group {
+    margin-bottom: 15px;
+}
+.server .server-form .form-control {
+    height: 40px;
+    border: none;
+}
+.server .server-form .sub-btn {
+    margin-top: 10px;
+}
+.server .server-form .sub-btn input {
+    background: #a40000;
+    color: #fff;
+}
+.slice { padding-top:70px;}
+.server .addrSel select {
+    float: left;
+    width: 33.3333%;
+}
+
+/*定制*/
+.select-color, .select-logo-color {
+    display: none;
+}
+.custom-made .cm-main {
+    margin-top: 140px;
+}
+.cm-main .draw-wrap {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #aaa;
+}
+.draw-wrap .type-name {
+    font-size: 30px;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+.draw-default {
+    margin:40px 0 20px;
+}
+.draw-thumbImg {
+    float:left;
+    padding: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    background: #333;
+    cursor: pointer;
+}
+.draw-thumbImg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.custom-made canvas {
+    width: 100%;
+    height: 100%;
+}
+.select-positon, .select-color, .select-logo-pos, .select-logo-color, .select-logo-font, .select-logo-effect, .input-logotxt {
+    margin-bottom: 20px;
+}
+.cm-main h3 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    background: #333;
+    color: #eee;
+    margin-bottom: 10px;
+    font-family: 'Microsoft yahei';
+    font-size: 16px;
+    position: relative;
+}
+.cm-main h3 .glyphicon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #333;
+    cursor: pointer;
+}
+.part-name-item, .logo-pos-item {
+    float: left;
+    width: 17.5%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 70%;
+}
+.part-color-item, .logo-color-item {
+    float: left;
+    width: 17.5%;
+    margin: 1%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 70%;
+}
+.part-color-value, .logo-color-value {
+    height: 30px;
+}
+.logo-eff-item, .logo-font-item {
+    float: left;
+    width: 31.3%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.logo-eff-item {
+    height: 70px;
+}
+.logo-eff-item img, .logo-font-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.select-logo-color, .select-logo-font, .select-logo-effect, .input-logotxt {
+    display: none;
+}
+.input-logotxt input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+}
+.cm-sub {
+    width: 100%;
+}
+.cm-pop .modal-title {
+    font-size: 22px;
+    font-family: 'microsoft yahei';
+    font-weight: bold;
+    color: #aaa;
+}
+.cm-pop .modal-body {
+    padding: 30px 50px;
+}
+.cm-pop .modal-footer {
+    padding: 15px 50px;
+}
+.cmthumbimg {
+    width: 200px;
+    height: 200px;
+}
+.cmprice {
+    font-weight: bold;
+    color: #a40000;
+}
+.cur {
+    border-width: 3px;
+    border-color: #a40000;
+    background-color: #a40000;
+    color: #fff;
+}
+
+/*定制打孔护具*/
+.dk-des {
+    background: #666;
+    min-height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 0 20px 20px;
+}
+.dk-des h4 {
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+}
+.dk-des h4::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 15px 5px 0 0;
+    background: #fff;
+}
+.dk-des img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.dkhj table {
+    width: 100%;
+}
+.dk-sel {
+    background: #666;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.dk-sel h4 {
+    color: #fff;
+    padding: 10px 0 20px;
+}
+.dk-table {
+    margin-top: 50px;
+}
+.dk-sel td {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 2px 5px;
+    height: 45px;
+}
+.dkvalue select {
+    height: 40px;
+    width: 150px;
+}
+.protect-sel {
+    background: #666;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.protect-sel h4 {
+    color: #fff;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.protect-sel td {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.protect-sel td.sel {
+    color: #fff;
+    background-color: #e71e28;
+}
+.cms2sub {
+    text-align: center;
+}
+
+/*尺寸测量表*/
+.cms3 #edui1_toolbarbox, .cms3 #edui1_bottombar {
+    display: none;
+}
+.cms3-main {
+    padding: 10px;
+    background: #666;
+    color: #fff;
+    border-radius: 5px;
+}
+.cms3-main h4 {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+.cms3-main h4 label {
+    padding-top: 0;
+    font-size: 14px;
+}
+.cms3-main .ccclsm {
+    padding: 10px 20px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*填写个人信息*/
+.cms4 .control-label {
+    text-align: left;
+}
+.cms4-main h3 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    color: black;
+}
+
+/*联系我们*/
+.contact-main {
+    margin-top: 100px;
+}
+
+/*news*/
+.blog-small .wrap, .page .wrap {
+    padding: 20px 0 0;
+    background: #fff;
+}
+.post-content {
+    padding-bottom: 30px !important;
+}
+
+/*定制列表*/
+.dz-item {
+    padding: 10px !important;
+}
+.dz-item .portfolio-item-title a {
+    font-size: 14px;
+    color: #333;
+}
+.dz-item .portfolio-item-title p {
+    font-style: normal;
+    font-weight: bold;
+    color: #DC143C;
+}
+.dz-itembtn .btn-default {
+    background: #DC143C;
+    color: #fff;
+    border: none;
+}
+
+/*footer*/
+#footer {
+    /*padding: 60px 0 20px;*/
+	margin-top: 100px;
+    border-top: 1px solid #ccc;
+}
+#footer h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.footer-bottom {
+   /* margin-top: 20px;*/
+}

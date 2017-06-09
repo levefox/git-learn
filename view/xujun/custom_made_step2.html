@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+   <meta charset="utf-8">
+   <title>{$site_seo_title} {$site_name}</title>
+   <meta name="keywords" content="{$site_seo_keywords}" />
+   <meta name="description" content="{$site_seo_description}">
+   {include file="public:head" /}
+</head>
+<body class="custom-made dkhj">
+{include file="public:nav" /}
+    <div class="container-fluid mt120">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="dk-des">
+                <h4>打孔位置示意图</h4>
+                <img src="{$yf_theme_path}public/images/dksm.png" />
+            </div>
+            <div class="dk-sel clearfix">
+                <div class="col-sm-4">
+                    <h4>打孔方式选择</h4>
+                    <div style="background:#fff;margin-bottom:20px;border-radius:3px;">
+                        <p style="padding:10px;">打孔皮革</p>
+                        <img src="{$yf_theme_path}public/images/dkpg.jpg" />
+                    </div>
+                    <div style="background:#fff;border-radius:3px;">
+                        <p style="padding:10px;">定位冲孔</p>
+                        <img src="{$yf_theme_path}public/images/dwck.jpg" />
+                    </div>
+                </div>
+                <div class="dk-table col-sm-8">
+                    <table>
+                    {foreach name="attrs.dkfs" item="v"}
+                        <tr>
+                            <td class="dkname" data-value="{$v.proattr_content}">{$v.proattr_name}</td>
+                            <td class="dkvalue">
+                                <select>
+                                    <option value="定位冲孔">定位冲孔</option>
+                                    <option value="冲孔皮革">冲孔皮革</option>
+                                    <option value="无冲孔" selected>无冲孔</option>
+                                </select>
+                            </td>
+                        </tr>
+                     {/foreach}
+                    </table>
+                </div>
+            </div>
+            <div class="protect-sel">
+                <h4>护具选择</h4>
+                <!-- <div class="" -->
+                <table>
+                    <tr>
+                        <td>风包</td>
+                        <td>护具</td>
+                        <td>钛片</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="hj-sel-item" data-name="风包" data-code="fb0" data-value="风包1"><img src="{$yf_theme_path}public/images/hjsel/fb1.png" /></td>
+                                    <td class="hj-sel-item" data-name="风包" data-code="fb1" data-value="风包2"><img src="{$yf_theme_path}public/images/hjsel/fb2.png" /></td>
+                                    <td class="hj-sel-item" data-name="风包" data-code="fb2" data-value="风包3"><img src="{$yf_theme_path}public/images/hjsel/fb3.png" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="hj-sel-item" data-name="护具" data-code="hj0" data-value="护具1"><img src="{$yf_theme_path}public/images/hjsel/hj1.png" /></td>
+                                    <td class="hj-sel-item" data-name="护具" data-code="hj1" data-value="护具2"><img src="{$yf_theme_path}public/images/hjsel/hj2.png" /></td>
+                                    <td class="hj-sel-item" data-name="护具" data-code="hj2" data-value="护具3"><img src="{$yf_theme_path}public/images/hjsel/hj3.png" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td class="hj-sel-item" data-name="钛片" data-code="tp0" data-value="钛片1"><img src="{$yf_theme_path}public/images/hjsel/tp1.png" /></td>
+                                    <td class="hj-sel-item" data-name="钛片" data-code="tp1" data-value="钛片2"><img src="{$yf_theme_path}public/images/hjsel/tp2.png" /></td>
+                                    <td class="hj-sel-item" data-name="钛片" data-code="tp2" data-value="钛片3"><img src="{$yf_theme_path}public/images/hjsel/tp3.png" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    <!-- {foreach name="attrs.dkfs" item="v"}
+                        <td data-sel='0' data-value="{$v.proattr_name}">{$v.proattr_name}</td>
+                     {/foreach} -->
+                    </tr>
+                </table>
+            </div>
+            <div class="clearfix cms2sub">
+                <a class="btn btn-danger" href="{:url('/home/custom/made',array('id'=>$pid))}">上一步</a>
+                <a class="btn btn-danger" href="{:url('/home/custom/made_step3',array('pid'=>$pid))}" id="cm2sub">下一步</a>
+            </div>
+        </div>
+    </div>
+    {include file="public:footer"/}
+    <script>
+        $(function(){
+            $(document).on("click",".hj-sel-item",function(){
+                $(this).addClass("sel").siblings().removeClass("sel");
+            })
+            $(document).on("click","#cm2sub",function(){
+                var order_prohj = [], order_prodk =[];
+                $(".dk-table tr").each(function(){
+                    var _dkobj = {
+                        dkcode:'',
+                        dkname:$(this).find(".dkname").html(),
+                        dkvalue:$(this).find(".dkvalue option:selected").val()
+                    }
+                    order_prodk.push(_dkobj);
+                })
+                $(".hj-sel-item.sel").each(function(){
+                    var _hjobj = {
+                        hjcode:$(this).attr("data-code"),
+                        hjname:'',
+                        hjvalue:$(this).attr("data-value"),
+                        hjimg:$(this).find("img").attr("src")
+                    }
+                    order_prohj.push(_hjobj);
+                })
+                sessionStorage.setItem('order_prohj',JSON.stringify(order_prohj));
+                sessionStorage.setItem('order_prodk',JSON.stringify(order_prodk));
+            })
+        })
+    </script>
+</body>
+</html>
