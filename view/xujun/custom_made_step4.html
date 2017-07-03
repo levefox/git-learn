@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>填写个人信息提交订单的页面</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+{include file="public:head" /}
+</head>
+
+<body>
+    {include file="public:nav" /}
+    <div class="cms4 mt120">
+    <form class="form-horizontal ajaxForm2" method="post" action="">
+        <div class="container-fluid mb30">
+        <input type="hidden" value="{$pid}" name="product_id" />
+        <input type="hidden" value="0" name="user_id"/>
+             <div class="col-sm-6 col-sm-offset-3 cms4-main">
+                <h3>填写个人信息</h3>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">真实姓名*</label>
+                        <div class="col-sm-9">
+                           {$uinfo.user_tname}
+                        </div>
+                    </div>
+                     <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">手机号码*</label>
+                    <div class="col-sm-9">
+                        {$uinfo.user_mobile}
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">邮箱*</label>
+                    <div class="col-sm-9">
+                       <input type="text" class="form-control" name="user_email"  maxlength="50" value="{$uinfo.user_email}" required >
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">所在地区*</label>
+
+                    <div class="form-group addrSel clearfix">
+                    <select name="mprovince" class="form-control" id="province" onChange="loadRegion('province',2,'city','{:url('admin/Ajax/getRegion')}');" style="width:20%; float:left" required>
+						<option value="">{:lang('province')}</option>
+						{volist name="province" id="vo"}
+							<option value="{$vo.id}" {if condition="$vo.id eq $uinfo['user_province']"} selected {/if}>{$vo.name}</option>
+						{/volist}
+					</select>
+                    <select name="mcity" class="form-control" id="city"  onchange="loadRegion('city',3,'town','{:url('admin/Ajax/getRegion')}');" style="width:25%; float:left" required>
+						<option value="">{:lang('city')}</option>
+                        {foreach name="city" item="v"}
+					    <option {if condition="$uinfo['user_city'] eq $v['id']"}selected{/if} value="{$v.id}">{$v.name}</option>
+						{/foreach}
+					</select>
+                    <select name="mtown" class="form-control" id="town" style="width:25%; float:left" required>
+						<option value="">{:lang('town')}</option>
+                        {volist name="town" id="vy"}
+						<option {if condition="$uinfo['user_town'] eq $vy['id']"}selected{/if} value="{$vy.id}">{$vy.name}</option>
+						{/volist}
+					</select>
+                </div>
+
+                    </div>
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">详细地址*</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="user_address"  maxlength="200"  value="{$uinfo.user_address}" required />
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">购买门店*</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="order_buyshop"  maxlength="50" required >
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">邮编</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control"  name="user_zip"  maxlength="8"  value="{$uinfo.user_zip}" />
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">电话</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="user_tel"  maxlength="20" value="{$uinfo.user_tel}" />
+                    </div></div>
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">传真</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control"  name="user_fax"  maxlength="20" value="{$uinfo.user_fax}" />
+                    </div></div>
+
+                    <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">单位电话</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control"  name="user_companytel"  maxlength="20" value="{$uinfo.user_companytel}" />
+                    </div></div>
+
+            </div>
+        </div>
+        <div class="clearfix" style="text-align:center;">
+            <a href="{:url('/home/custom/made_step3',array('pid'=>$pid))}" class="btn btn-danger">上一步</a>
+            <button type="submit" class="btn btn-danger">确定提交</button>
+        </div>
+        <input id="order_procolor" name="order_procolor" type="hidden" value="" />
+        <input id="order_prolog" name="order_procolor" type="hidden" value="" />
+        <input id="order_prodk" name="order_procolor" type="hidden" value="" />
+        <input id="order_prohj" name="order_procolor" type="hidden" value="" />
+    </form>
+    </div>
+    {include file="public:footer"/}
+    <script>
+        $(function(){
+            var order_procolor = sessionStorage.getItem('order_procolor'),
+                order_prolog = sessionStorage.getItem('order_prolog'),
+                order_prodk = sessionStorage.getItem('order_prodk'),
+                order_prohj = sessionStorage.getItem('order_prohj');
+            $("#order_procolor").val(order_procolor);
+            $("#order_prolog").val(order_prolog);
+            $("#order_prodk").val(order_prodk);
+            $("#order_prohj").val(order_prohj);
+        })
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/others/region.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/yfcmf/yfcmf.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/yfcmf/yfcmf.css">
+    <script type="text/javascript" src="__PUBLIC__/others/jquery.form.js"></script>
+    {include file="public:scripts"/}
+</body>
+</html>

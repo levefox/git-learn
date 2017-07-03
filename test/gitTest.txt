@@ -6,8 +6,9 @@ test3
 git bug fixed
 test4
 
-i`m work on the dev branch
+测试分支1
 
+i`m work on the dev branch
 
 测试分支0
 

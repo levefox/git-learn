@@ -1,0 +1,163 @@
+html,body {
+    height: 100%;
+}
+body {
+    background: #eee;
+}
+.nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:92px;
+    line-height: 70px;
+    background: url('../images/navBg.png') top center repeat-x;
+    z-index: 10;
+    text-shadow: 1px 1px 1px #fafafa;
+    font-size: 16px;
+    font-style: italic;
+}
+.nav .logoCn {
+    text-align: right;
+}
+.nav .logoCn img {
+    height: 60px;
+}
+.nav .logoEn {
+    text-align: left;
+}
+.nav .logoEn img {
+    height: 30px;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    font-size: 80%;
+}
+.nav-item:hover .nav-item-list {
+    display: block;
+}
+.nav-item-list {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+}
+.nav-item-list li {
+    opacity: 0;
+    -webkit-opacity: 0;
+    height: 45px;
+    line-height: 45px;
+    margin:5px 0 0;
+    text-align: center;
+}
+.nav-child-bg {
+    position: absolute;
+    width: 100%;
+    top: 72px;
+    left: 0;
+    z-index: 4;
+    background: rgba(255,255,255,0.8);
+}
+.swiper-container, .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    height: 100%;
+    position: relative;
+}
+.swiper-slide img {
+    width:100%;
+    height: 100%;
+}
+.swiper-button i {
+    color: #fff;
+}
+.swiper-button {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 18px;
+    text-align: center;
+    background: rgba(0,0,0,0.9);
+    margin-top: -32px;
+    cursor: pointer;
+}
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next {
+    right: 0;
+}
+.swiper-button:hover {
+    background: rgba(0,0,0,0.5);
+}
+.fast-entrance {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 240px;
+    z-index: 11;
+}
+.fast-entrance li {
+    opacity: 0;
+    -webkit-opacity: 0;
+}
+.fast-entrance li:nth-child(1){
+    animation: fadeInUp 0.5s;
+    -webkit-animation: fadeInUp 0.5s;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+}
+.fast-entrance li:nth-child(2){
+    animation: fadeInUp 0.5s;
+    animation-delay : 0.5s;
+    animation-fill-mode:forwards;
+    -webkit-animation: fadeInUp 0.5s;
+    -webkit-animation-delay : 0.5s;
+    -webkit-animation-fill-mode:forwards;
+}
+.fast-entrance li:nth-child(3){
+    animation: fadeInUp 0.5s;
+    animation-delay : 1s;
+    animation-fill-mode:forwards;
+    -webkit-animation: fadeInUp 0.5s;
+    -webkit-animation-delay : 1s;
+    -webkit-animation-fill-mode:forwards;
+}
+.fast-entrance li:hover {
+    opacity: 0.9;
+    -webkit-opacity: 0.9;
+}
+.fast-entrance li h3 {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 90%;
+    font-weight: normal;
+    background: rgba(0,0,0,0.6);
+}
+.fast-entrance li p {
+    height: 120px;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.fast-entrance li p img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.indexBottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: url('../images/indexFooter.png') top center repeat-x;
+    z-index: 10;
+}
